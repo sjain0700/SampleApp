@@ -1,32 +1,27 @@
 
 import { HTTPHelper } from './http';
+import { AppString } from './strings'
+import {  Alert } from 'react-native';
 
-export class LoginHelper {
+export class ServiceHelper {
 
-    static _signInAsync = async (data) => {
-        console.log('data is', data)
+    static _requestAsync = async (data) => {
         try {
-            //response = await HTTPHelper.post(IRP_CONFIG.baseURL + IRP_CONFIG.login, data, false)
-            response = await HTTPHelper.post('http://rakbank-test.mocklab.io/activation', data, false)
-             console.log('response is->>', response)
-            if(response) {
-               
-                return Promise.resolve({
-                    // userEmail: data.userName,
-                    // userId: response.data.user.id,
-                    response
-                })
+            response = await HTTPHelper.post( AppString.baseUrl, data, false)
+            console.log('response is->>', response)
+            if (response) {
+
+                return Promise.resolve(true)
             }
             else {
                 return Promise.resolve(false);
             }
         }
-        catch(e) {
-
-           // alert(errors("unableToLogin"));
-           // console.log(errors("unableToLogin"), e)
+        catch (e) {
+            console.log('server error')
+            alert(AppString.serverError);
         }
-        
-        
+
+
     }
 }
