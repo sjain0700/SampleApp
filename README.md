@@ -23,5 +23,5 @@ SampleApp project dependencies
 
 The SampleApp project uses the following third-party dependencies:
 
-"react-native-vector-icons" - to implement icons
-"axios"
+1. "react-native-vector-icons" - to implement icons
+2. "axios"
