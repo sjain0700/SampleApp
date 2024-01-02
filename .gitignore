@@ -3,7 +3,7 @@ node_modules
 # OSX
 #
 .DS_Store
-
+*.ios/Pods/
 # Xcode
 #
 build/
