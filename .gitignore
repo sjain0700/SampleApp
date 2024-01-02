@@ -41,3 +41,6 @@ buck-out/
 \.buckd/
 android/app/libs
 android/keystores/debug.keystore
+ios/Pods/boost/boost/atomic.hpp
+ios/Pods/boost/boost/beast.hpp
+ios/Pods/boost/*
